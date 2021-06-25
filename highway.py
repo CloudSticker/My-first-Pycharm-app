@@ -27,7 +27,7 @@ class Road(object):
         self.carsarray = []
         self.matrix = []
         self.outmatrix = [0]*roadlength
-        print(self.outmatrix)
+
         i = 0
         while i < self.carsamount:
             self.rnum = random.randint(0, roadlength-1)
@@ -38,7 +38,10 @@ class Road(object):
             self.carsarray.append(Car(self.rnum, self.roadlength))
             self.outmatrix[self.rnum-1] = 1;
 
+        print(self.outmatrix)
+
     def getMatrix(self):
+        print(self.outmatrix)
         return self.outmatrix
 
     def makeMove(self):
@@ -58,6 +61,7 @@ class Road(object):
                 continue
         self.matrix.clear()
         self.matrix = newmatrix
+        print(self.outmatrix)
         return self.outmatrix
 
 
